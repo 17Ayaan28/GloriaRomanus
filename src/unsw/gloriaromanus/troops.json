@@ -1,0 +1,6 @@
+[{ "type": "infantry", "name": "heavy infantry", "range": "10", "armour": "20", "morale": "30", "speed": "20", "attack": "30", "defenseSkill": "10", "shieldDefense": "10", "turns_to_train": "1", "movement_points": "10", "cost": "5" },
+{ "type": "infantry", "name": "berserker", "range": "3", "armour": "25", "morale": "40", "speed": "10", "attack": "60", "defenseSkill": "12", "shieldDefense": "10", "turns_to_train": "1", "movement_points": "10", "cost": "10" },
+{ "type": "infantry", "name": "missile infantry", "range": "50", "armour": "20", "morale": "30", "speed": "20", "attack": "30", "defenseSkill": "10", "shieldDefense": "10", "turns_to_train": "1", "movement_points": "10", "cost": "20" },
+{ "type": "cavalry", "name": "melee cavalry", "range": "30", "armour": "25", "morale": "32", "speed": "20", "attack": "30", "defenseSkill": "10", "shieldDefense": "10", "turns_to_train": "2", "movement_points": "10", "cost": "15" },
+{ "type": "artillery", "name": "horse archers", "range": "80", "armour": "20", "morale": "30", "speed": "20", "attack": "30", "defenseSkill": "10", "shieldDefense": "10", "turns_to_train": "3", "movement_points": "10", "cost": "15" }
+]

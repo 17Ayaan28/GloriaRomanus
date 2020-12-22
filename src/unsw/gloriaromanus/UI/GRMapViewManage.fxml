@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.Background?>
+<?import javafx.scene.layout.BackgroundFill?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxWidth="250" spacing="10" styleClass="panel-region" stylesheets="/unsw/gloriaromanus/UI/style.css" StackPane.alignment="TOP_LEFT" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unsw.gloriaromanus.UI.GRMapViewManageController">
+    <padding>
+        <Insets topRightBottomLeft="10" />
+    </padding>
+    <background>
+        <Background>
+            <fills>
+                <BackgroundFill>
+                    <fill>
+                        <Color opacity="0.7" />
+                    </fill>
+                </BackgroundFill>
+            </fills>
+        </Background>
+    </background>
+   <Pane prefHeight="576.0" prefWidth="250.0">
+      <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="100.0" text="Province: " textAlignment="RIGHT" textFill="WHITE">
+            <font>
+               <Font name="Arial Bold" size="13.0" />
+            </font>
+         </Label>
+            <Label fx:id="pNameLabel" layoutX="105.0" styleClass="changes" text="Province Name" textFill="WHITE" />
+         <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="16.0" prefWidth="100.0" text="Owned By: " textAlignment="RIGHT" textFill="WHITE">
+            <font>
+               <Font name="Arial Bold" size="13.0" />
+            </font>
+         </Label>
+         <Label fx:id="pOwnerLabel" layoutX="105.0" layoutY="16.0" text="Probably Rome" textFill="WHITE" />
+         <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="32.0" prefWidth="100.0" text="Movement Pts: " textAlignment="RIGHT" textFill="WHITE">
+            <font>
+               <Font name="Arial Bold" size="13.0" />
+            </font>
+         </Label>
+         <Label fx:id="pMovePtsLabel" layoutX="105.0" layoutY="32.0" text="444" textFill="WHITE" />
+         <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="48.0" prefWidth="100.0" text="Wealth: " textAlignment="RIGHT" textFill="WHITE">
+            <font>
+               <Font name="Arial Bold" size="13.0" />
+            </font>
+         </Label>
+         <Label fx:id="pWealthLabel" layoutX="105.0" layoutY="48.0" text="000" textFill="WHITE" />
+         <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="64.0" prefWidth="100.0" text="Wealth/Turn: " textAlignment="RIGHT" textFill="WHITE">
+            <font>
+               <Font name="Arial Bold" size="13.0" />
+            </font>
+         </Label>
+         <Label fx:id="pWealthPTurn" layoutX="105.0" layoutY="64.0" text="000" textFill="WHITE" />
+         <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="80.0" prefWidth="100.0" text="Tax Rate: " textAlignment="RIGHT" textFill="WHITE">
+            <font>
+               <Font name="Arial Bold" size="13.0" />
+            </font>
+         </Label>
+         <Label fx:id="pTaxRate" layoutX="105.0" layoutY="80.0" text="0%" textFill="WHITE" />
+         <Slider fx:id="pTaxSlider" blockIncrement="5.0" layoutX="15.0" layoutY="104.0" majorTickUnit="5.0" max="25.0" min="10.0" minorTickCount="0" prefHeight="40.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" style="-fx-tick-label-fill: white;" />
+         <Label layoutY="144.0" text="Troops:" textAlignment="RIGHT" textFill="WHITE">
+            <font>
+               <Font name="Arial Bold" size="13.0" />
+            </font>
+         </Label>
+         <ListView fx:id="troopsListView" layoutY="160.0" prefHeight="128.0" prefWidth="230.0" />
+         <Button layoutY="304.0" mnemonicParsing="false" onAction="#manageBuildingsButtonPress" prefHeight="32.0" prefWidth="230.0" text="Manage Buildings" />
+         <Button fx:id="trainButton" layoutY="352.0" mnemonicParsing="false" onAction="#trainTroopsButtonPress" prefHeight="32.0" prefWidth="230.0" text="Train Troops" />
+         <Button fx:id="moveButton" layoutY="400.0" mnemonicParsing="false" onAction="#moveTroopsButtonPress" prefHeight="32.0" prefWidth="230.0" text="Move Troops" />
+         <Button fx:id="invadeButton" layoutY="448.0" mnemonicParsing="false" onAction="#invadeOpponentButtonPress" prefHeight="32.0" prefWidth="230.0" text="Invade Opponent" />
+         <Button layoutX="158.0" layoutY="518.0" mnemonicParsing="false" onAction="#returnButtonPress" prefHeight="16.0" prefWidth="72.0" text="Return" />
+      </children>
+   </Pane>
+</VBox>

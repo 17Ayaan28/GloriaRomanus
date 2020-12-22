@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<?import com.esri.arcgisruntime.mapping.view.MapView?>
+<!-- <MapView fx:id="mapView"/> -->
+
+<StackPane fx:id="stackPaneMain" prefHeight="576.0" prefWidth="1024.0" stylesheets="/unsw/gloriaromanus/UI/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unsw.gloriaromanus.UI.GRMapViewController">
+   <children>
+   <MapView fx:id="mapView" />
+      <Pane pickOnBounds="false" prefHeight="576.0" prefWidth="1024.0" styleClass="panel-region">
+         <children>
+            <Button fx:id="mapCenterButton" layoutX="894.0" layoutY="520.0" mnemonicParsing="false" onAction="#mapCenterButtonPress" prefHeight="38.0" prefWidth="116.0" text="Recenter Map" />
+            <Label fx:id="turnText" alignment="CENTER" layoutX="858.0" layoutY="13.0" prefHeight="50.0" prefWidth="152.0" style="-fx-background-color: #000000AA; -fx-border-radius: 15;" text="TURN 100" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="cPlayerText" alignment="CENTER" layoutX="858.0" layoutY="63.0" prefHeight="13.0" prefWidth="152.0" style="-fx-background-color: #000000AA; -fx-border-radius: 15;" text="PLAYER 1" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="cPlayerGoldText" alignment="CENTER" layoutX="858.0" layoutY="85.0" prefHeight="13.0" prefWidth="152.0" style="-fx-background-color: #000000AA; -fx-border-radius: 15;" text="1000G" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</StackPane>

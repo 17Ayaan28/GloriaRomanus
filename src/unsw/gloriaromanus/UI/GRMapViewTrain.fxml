@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.Background?>
+<?import javafx.scene.layout.BackgroundFill?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxWidth="250" spacing="10" styleClass="panel-region" stylesheets="/unsw/gloriaromanus/UI/style.css" StackPane.alignment="TOP_LEFT" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unsw.gloriaromanus.UI.GRMapViewTrainController">
+    <padding>
+        <Insets topRightBottomLeft="10" />
+    </padding>
+    <background>
+        <Background>
+            <fills>
+                <BackgroundFill>
+                    <fill>
+                        <Color opacity="0.7" />
+                    </fill>
+                </BackgroundFill>
+            </fills>
+        </Background>
+    </background>
+   <children>
+      <Pane fx:id="trainPane" prefHeight="576.0" prefWidth="230.0">
+         <children>
+            <Label fx:id="title" alignment="TOP_LEFT" contentDisplay="RIGHT" prefHeight="20.0" prefWidth="230.0" text="Train Troops" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="158.0" layoutY="518.0" mnemonicParsing="false" onAction="#backButtonPress" prefHeight="16.0" prefWidth="72.0" text="Back" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="32.0" prefWidth="100.0" text="Province: " textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="ttNameLabel" layoutX="105.0" layoutY="32.0" styleClass="changes" text="Province Name" textFill="WHITE" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="48.0" prefWidth="100.0" text="Training Slots: " textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="ttTrainingSlots" layoutX="105.0" layoutY="48.0" text="10000" textFill="WHITE" />
+            <Label layoutY="80.0" text="Current Troops:" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <ListView fx:id="ttCurrTroops" layoutY="96.0" prefHeight="128.0" prefWidth="230.0" />
+            <Label layoutY="224.0" text="Currently Training: " textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <ListView fx:id="ttCurrentTraining" layoutY="240.0" maxHeight="64.0" minHeight="32.0" prefWidth="230.0" />
+            <Label contentDisplay="RIGHT" layoutY="317.0" prefHeight="16.0" prefWidth="83.0" text="Train Troop:" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="ttTroopSelector" layoutY="336.0" onAction="#onTroopSelect" prefHeight="27.0" prefWidth="230.0" promptText="Pick a troop..." />
+            <Label contentDisplay="RIGHT" layoutY="372.0" prefHeight="16.0" prefWidth="44.0" text="Cost: " textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="ttCost" contentDisplay="RIGHT" layoutX="40.0" layoutY="372.0" prefHeight="16.0" prefWidth="45.0" text="" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="ttTrainButton" layoutX="182.0" layoutY="368.0" mnemonicParsing="false" onAction="#ttTrainButtonPress" prefHeight="27.0" prefWidth="48.0" text="Train" />
+            <ComboBox fx:id="numTroops" layoutX="-1.0" layoutY="413.0" prefHeight="27.0" prefWidth="230.0" promptText="choose number of troops" />
+            <Label fx:id="display" layoutX="5.0" layoutY="463.0" prefHeight="17.0" prefWidth="220.0" text="" textFill="#f8f4f4" />
+         </children>
+      </Pane>
+   </children>
+</VBox>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Background?>
+<?import javafx.scene.layout.BackgroundFill?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxWidth="250" spacing="10" styleClass="panel-region" stylesheets="/unsw/gloriaromanus/UI/style.css" StackPane.alignment="TOP_LEFT" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unsw.gloriaromanus.UI.GRMapViewBuildController">
+    <padding>
+        <Insets topRightBottomLeft="10" />
+    </padding>
+    <background>
+        <Background>
+            <fills>
+                <BackgroundFill>
+                    <fill>
+                        <Color opacity="0.7" />
+                    </fill>
+                </BackgroundFill>
+            </fills>
+        </Background>
+    </background>
+   <children>
+      <Pane fx:id="buildingPane" prefHeight="576.0" prefWidth="230.0">
+         <children>
+            <Label fx:id="title" alignment="TOP_LEFT" contentDisplay="RIGHT" prefHeight="20.0" prefWidth="230.0" text="Manage Buildings" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="158.0" layoutY="518.0" mnemonicParsing="false" onAction="#backButtonPress" prefHeight="16.0" prefWidth="72.0" text="Back" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="32.0" prefWidth="100.0" text="Province: " textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="mBNameLabel" layoutX="105.0" layoutY="32.0" styleClass="changes" text="Province Name" textFill="WHITE" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="48.0" prefWidth="100.0" text="Wealth: " textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="mBWealthLabel" layoutX="105.0" layoutY="48.0" text="000" textFill="WHITE" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="64.0" prefWidth="100.0" text="Wealth/Turn: " textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="mBWealthPTurn" layoutX="105.0" layoutY="64.0" text="000" textFill="WHITE" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="96.0" prefWidth="100.0" text="Now Building: " textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="mBCurrBuilding" layoutX="105.0" layoutY="96.0" text="Nothing" textFill="WHITE" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="144.0" prefWidth="100.0" text="Troop: " textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="mBCurrTroop" layoutX="105.0" layoutY="144.0" text="None" textFill="WHITE" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="160.0" prefWidth="100.0" text="Farm: " textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="mBCurrFarm" layoutX="105.0" layoutY="160.0" text="None" textFill="WHITE" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="176.0" prefWidth="100.0" text="Market: " textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="mBCurrMarket" layoutX="105.0" layoutY="176.0" text="None" textFill="WHITE" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="192.0" prefWidth="100.0" text="Port: " textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="mBCurrPort" layoutX="105.0" layoutY="192.0" text="None/Unavailable" textFill="WHITE" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="208.0" prefWidth="100.0" text="Mine: " textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="mBCurrMine" layoutX="105.0" layoutY="208.0" text="None" textFill="WHITE" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="224.0" prefWidth="100.0" text="Smith: " textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="mBCurrSmith" layoutX="105.0" layoutY="224.0" text="None" textFill="WHITE" />
+            <Label contentDisplay="RIGHT" layoutY="248.0" prefWidth="100.0" text="Build/Upgrade: " textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="mBBuildingSelector" layoutY="264.0" onAction="#onBuildingSelect" prefHeight="27.0" prefWidth="230.0" promptText="Pick a building..." />
+            <Label contentDisplay="RIGHT" layoutY="305.0" prefHeight="16.0" prefWidth="44.0" text="Cost: " textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="mBCost" contentDisplay="RIGHT" layoutX="45.0" layoutY="305.0" prefHeight="16.0" prefWidth="45.0" text="1000G" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="buildButton" layoutX="183.0" layoutY="300.0" mnemonicParsing="false" onAction="#buildButtonPress" prefHeight="27.0" prefWidth="48.0" text="Build" />
+            <Label fx:id="mBTurnCntLevel" layoutX="105.0" layoutY="112.0" text="(X turns till finished)" textFill="WHITE" />
+         </children>
+      </Pane>
+   </children>
+</VBox>
